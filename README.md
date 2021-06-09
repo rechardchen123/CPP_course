@@ -15,13 +15,13 @@ This is a note for my C++ learning.
 
       https://godbolt.org/z/xPq6e9
 
-      ![image-20210422225119110](/home/xchen/Desktop/CPP_course/README.assets/image-20210422225119110.png)
+      ![image-20210422225119110](./README.assets/image-20210422225119110.png)
 
       
 
     - 对象生命周期精确控制
 
-    ![image-20210422232257035](/home/xchen/Desktop/CPP_course/README.assets/image-20210422232257035.png)
+    ![image-20210422232257035](./README.assets/image-20210422232257035.png)
 
     对象生命周期精确控制可以节省资源，避免引入额外的开销
 
@@ -83,7 +83,7 @@ This is a note for my C++ learning.
 
 - 简单的加工模型：
 
-![image-20210423111831849](/home/xchen/Desktop/CPP_course/README.assets/image-20210423111831849.png)
+![image-20210423111831849](./README.assets/image-20210423111831849.png)
 
 - 问题：无法处理大型程序
   - 加工耗时较长
@@ -91,7 +91,7 @@ This is a note for my C++ learning.
 
 - 解决办法：分块处理
 
-![image-20210423112113103](/home/xchen/Desktop/CPP_course/README.assets/image-20210423112113103.png)
+![image-20210423112113103](./README.assets/image-20210423112113103.png)
 
 - 好处
   - 编译耗资源但一次处理输入较少 
@@ -107,7 +107,7 @@ This is a note for my C++ learning.
     - 程序级：一般函数
     - 翻译单元级：内连函数、类、模板
 
-![image-20210423115338886](/home/xchen/Desktop/CPP_course/README.assets/image-20210423115338886.png)
+![image-20210423115338886](./README.assets/image-20210423115338886.png)
 
 - 预处理
   - 将源文件转换为翻译单元的过程
@@ -139,7 +139,7 @@ This is a note for my C++ learning.
 
 - （内建）类型：为一段存储空间赋予实际的意义
 
-![image-20210428011435561](/home/xchen/Desktop/CPP_course/README.assets/image-20210428011435561.png)
+![image-20210428011435561](./README.assets/image-20210428011435561.png)
 
 - 语句：表明了需要执行的操作
 
@@ -167,7 +167,7 @@ This is a note for my C++ learning.
   - 条件部分：用于判断是否执行
   - 语句部分：要执行的操作
 
-<img src="/home/xchen/Desktop/CPP_course/README.assets/image-20210528203631727.png" alt="image-20210528203631727" style="zoom:50%;" />
+<img src="./README.assets/image-20210528203631727.png" alt="image-20210528203631727" style="zoom:50%;" />
 
 - ==与=操作：
   - =操作：赋值操作
@@ -205,6 +205,18 @@ This is a note for my C++ learning.
 
 
 ## 第2节：类型详述
+
+- 类型可以分为基本类型和复杂类型
+  - 基本类型：C++语句中所支持的类型
+    - 数值类型
+      - 字符类型（char, wchar_t, char16_t, char32_t）
+      - 整数类型
+        - 带符号整数类型：short, int, long, long long
+        - 无符号整数类型：unsigned + 带符号整数类型
+      - 浮点类型
+        - float, double, long double
+    - void
+  - 复杂类型：由基本类型组合，变种所产生的类型，可能是标准库引入，或自定义类型
 
 
 
