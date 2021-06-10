@@ -282,7 +282,7 @@ This is a note for my C++ learning.
   - & - 取地址操作符
   - *- 解引用操作符
 
-
+因此 
 
 ## 第4节：常量与常量表达式类型
 
