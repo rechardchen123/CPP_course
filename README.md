@@ -15,13 +15,13 @@ This is a note for my C++ learning.
 
       https://godbolt.org/z/xPq6e9
 
-      ![image-20210422225119110](/home/xchen/Desktop/CPP_course/README.assets/image-20210422225119110.png)
+      ![image-20210422225119110](./README.assets/image-20210422225119110.png)
 
       
 
     - 对象生命周期精确控制
 
-    ![image-20210422232257035](/home/xchen/Desktop/CPP_course/README.assets/image-20210422232257035.png)
+    ![image-20210422232257035](./README.assets/image-20210422232257035.png)
 
     对象生命周期精确控制可以节省资源，避免引入额外的开销
 
@@ -83,7 +83,7 @@ This is a note for my C++ learning.
 
 - 简单的加工模型：
 
-![image-20210423111831849](/home/xchen/Desktop/CPP_course/README.assets/image-20210423111831849.png)
+![image-20210423111831849](./README.assets/image-20210423111831849.png)
 
 - 问题：无法处理大型程序
   - 加工耗时较长
@@ -91,7 +91,7 @@ This is a note for my C++ learning.
 
 - 解决办法：分块处理
 
-![image-20210423112113103](/home/xchen/Desktop/CPP_course/README.assets/image-20210423112113103.png)
+![image-20210423112113103](./README.assets/image-20210423112113103.png)
 
 - 好处
   - 编译耗资源但一次处理输入较少 
@@ -107,7 +107,7 @@ This is a note for my C++ learning.
     - 程序级：一般函数
     - 翻译单元级：内连函数、类、模板
 
-![image-20210423115338886](/home/xchen/Desktop/CPP_course/README.assets/image-20210423115338886.png)
+![image-20210423115338886](./README.assets/image-20210423115338886.png)
 
 - 预处理
   - 将源文件转换为翻译单元的过程
@@ -139,7 +139,7 @@ This is a note for my C++ learning.
 
 - （内建）类型：为一段存储空间赋予实际的意义
 
-![image-20210428011435561](/home/xchen/Desktop/CPP_course/README.assets/image-20210428011435561.png)
+![image-20210428011435561](./README.assets/image-20210428011435561.png)
 
 - 语句：表明了需要执行的操作
 
@@ -167,7 +167,7 @@ This is a note for my C++ learning.
   - 条件部分：用于判断是否执行
   - 语句部分：要执行的操作
 
-<img src="/home/xchen/Desktop/CPP_course/README.assets/image-20210528203631727.png" alt="image-20210528203631727" style="zoom:50%;" />
+<img src="./README.assets/image-20210528203631727.png" alt="image-20210528203631727" style="zoom:50%;" />
 
 - ==与=操作：
   - =操作：赋值操作
@@ -227,7 +227,43 @@ This is a note for my C++ learning.
     - void
   - 复杂类型：由基本类型组合，变种产生的类型，可能是标准库引入，或者自定义类型
 
-
+- 与类型相关的标准未定义部分
+  - char是否有符号
+  - 整数中的内存中的保存方式：大端，小端![image-20210610163223948](./README.assets/image-20210610163223948.png)
+  - 每种类型的大小（间接影响取值范围）
+    - c++11中引入了固定尺寸的整数类型，如int32_t
+- 字面值及其类型
+  - 字面值：在程序中直接表示为一个具体数值或者字符串的值
+  - 每个字面值都有其类型
+    - 整数字面值：20（十进制），024（八进制），0x14（十六进制）
+    - 浮点数：1.3
+    - 字符字面值：'c', '\n', -- char类型
+    - 字符串字面值: "hello"
+    - 布尔字面值：true, false
+    - 指针字面值：nullptr 
+  - 可以为字面值引入前缀或者后缀改变其类型
+    - 1.3f
+  - 可以引入自定义后缀来修改字面值类型
+- 变量及其类型
+  - 变量：对应了一段存储空间，可以改变其中的内容
+  - 变量的类型在其首次声明（定义）时指定：
+    - int x: 定义一个变量x, 其类型为int
+    - 变量声明和定义的区别：extern 前缀
+  - 变量的初始化与赋值
+    - 初始化：在构造变量之初为其赋予的初始值
+      - 缺省初始化
+      - 直接/拷贝初始化
+      - 其他初始化
+    - 赋值：修改变量所保存的数值
+- 隐式类型转换
+  - 为变量赋值时可能涉及到类型转换
+    - bool与整数之间的转换
+    - 浮点数与整数之间的类型转换 
+  - 隐式类型转换不只发生在赋值时
+    - if 判断
+    - 数值比较
+      - 无符号数据与带符号数据之间的比较
+      - std::cmp_XXX（c++20）
 
 
 
@@ -235,7 +271,16 @@ This is a note for my C++ learning.
 
 ## 第3节：复合类型：从指针到引用
 
+- 指针：一种间接类型
 
+![image-20210610170746319](./README.assets/image-20210610170746319.png)
+
+- 特点
+  - 可以指向不同的对象
+  - 具有相同的尺寸
+- 相关操作
+  - & - 取地址操作符
+  - *- 解引用操作符
 
 
 
