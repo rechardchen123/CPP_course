@@ -267,8 +267,6 @@ This is a note for my C++ learning.
 
 
 
-
-
 ## 第3节：复合类型：从指针到引用
 
 - 指针：一种间接类型
